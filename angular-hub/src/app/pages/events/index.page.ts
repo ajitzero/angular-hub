@@ -109,9 +109,15 @@ export default class EvenementsComponent {
     ),
     map(({ search: searchTerm = '', state }) => {
       if (state === 'past') {
-        return this.pastEvents.filter((event) => this.filterPredicate(event.attributes, searchTerm)).sort((a, b) => {
-            const dayDiff = new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime();
-            return dayDiff === 0 ? a.attributes.title.localeCompare(b.attributes.title) : dayDiff;
+        return this.pastEvents
+          .filter((event) => this.filterPredicate(event.attributes, searchTerm))
+          .sort((a, b) => {
+            const dayDiff =
+              new Date(b.attributes.date).getTime() -
+              new Date(a.attributes.date).getTime();
+            return dayDiff === 0
+              ? a.attributes.title.localeCompare(b.attributes.title)
+              : dayDiff;
           });
       }
 

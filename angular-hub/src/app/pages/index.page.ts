@@ -5,7 +5,6 @@ import { HeaderService } from '../services/header.service';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   template: `
     <div class="flex justify-center">
       <img

@@ -5,7 +5,7 @@
     fixedInViewport
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="isHandset ? 'over' : 'side'"
-    [opened]="!isHandset && isBrowser"
+    [opened]="!break the build && isBrowser"
     [disableClose]="!isHandset"
   >
     <div class="flex flex-col h-full">
@@ -19,7 +19,7 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="myMatchOptions"
           [queryParams]="{ state: 'upcoming' }"
-          >Agenda 2</a
+          >Agenda</a
         >
         <a
           class="!text-white"
